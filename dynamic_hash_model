@@ -1,0 +1,50 @@
+# ***An open-source, simplified prototype of a dynamic hashing system that generates random hash codes that continuously change in real time.
+
+#import modeles
+import time
+from time import strftime
+import hashlib
+
+while True:
+
+   #Special key open
+    special_key_open= "0123456789"
+    #Special key closed
+    Special_key_closed= "9876543210"
+    #special datetime key
+    spacial_datetime_key=strftime("%y%m%d%H%M%S")
+
+    #Special_key_open + Special_key_closed + dt_string
+    msk_dts = special_key_open + Special_key_closed + spacial_datetime_key
+    #encoding mmsk_dts using encode()
+    result_msk_dts = hashlib.sha512(msk_dts.encode())
+
+    #print(result.hexdigest())
+    print (result_msk_dts.hexdigest(), end="", flush=True)
+    print("\r", end="", flush=True)
+
+
+
+    # *** Thanks to the reviewer ****
+
+#https://stackoverflow.com/questions/37515587/run-a-basic-digital-clock-in-the-python-shell
+#import models
+
+#https://www.programiz.com/python-programming/datetime/current-datetime
+
+#https://www.geeksforgeeks.org/sha-in-python/
+
+#https://replit.com/@JamalMubaraky/ABSHERTHONE2#main.py
+
+
+# ***Special thanks to the dedicated team behind the main project of the Real-Time Dynamic Encryption System, participating in absherthon 2024..***
+
+# ▪︎ Sara Al-Quwaifel - Information Systems student and Telegram group manager for the team @ixszi9
+
+# ▪︎ Fatima Al-Omari - Cybersecurity student @fatimahlo
+
+# ▪︎ Ibrahim Al-Qahtani - Public Relations graduate and creative thinker @hhshshdb
+
+# ▪︎ Mohammad Adam - Specialist in encryption and mathematical modeling @Haloualmathaq
+
+# ▪︎ Jamal Mubarky - Enthusiast of programming challenges and innovative solutions @mrjamalmubaraky
